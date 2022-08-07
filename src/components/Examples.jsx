@@ -1,13 +1,23 @@
-import { Center, Heading, useColorModeValue, Wrap, WrapItem } from "@chakra-ui/react"
+import { Center, Heading, useColorModeValue, Wrap, WrapItem, Image } from "@chakra-ui/react"
 import Card from "./Card"
-import SVGies from "./SVGies"
-import { wallets } from "../constants/wallets"
 
+const images = [
+    'g',
+    'e',
+    'c',
+    'd',
+    'f',
+    'i',
+    'h',
+    'j',
+    'b',
+    'a',
+]
 
 const Examples = () => {
 
     const headingVariant = useColorModeValue('withShadowLight', 'withShadowDark')
-    const cardVariant = useColorModeValue('noShadowLight', 'noShadowDark')
+    const cardVariant = useColorModeValue('shadowLight', 'shadowDark')
 
     return (
         <>
@@ -22,16 +32,15 @@ const Examples = () => {
 
             <Center pb='3em'>
                 <Wrap spacing="30px" pt='10px' pb='10px' justify='center' >
-                    {wallets.map((w, i) => {
+                    {images.map((w, i) => {
                         return (
                             <WrapItem key={i}>
                                 <Card
                                     size='sm'
                                     variant={cardVariant}
                                 >
-                                    <SVGies
-                                        // className='SVGiejs'
-                                        address={w}
+                                    <Image
+                                        src={`/examples/${w}.png`}
                                         width={150}
                                         height={150} />
                                 </Card>
