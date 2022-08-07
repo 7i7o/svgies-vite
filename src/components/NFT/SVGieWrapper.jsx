@@ -1,9 +1,12 @@
-import { Center } from '@chakra-ui/react'
+import { Center, VStack, Text } from '@chakra-ui/react'
 
 import { useContext, useEffect, useState } from 'react'
 import { useContractRead } from 'wagmi'
 import SVGie from './SVGie';
 import { Context } from '../../Context';
+import SVGies from '../avatar/SVGies';
+
+const previewSize = 200
 
 const SVGieWrapper = (props) => {
 
@@ -58,8 +61,11 @@ const SVGieWrapper = (props) => {
                 </Center >
                 : !balance ?
                     <Center align='center' color='#303030' textShadow='0 0 3px #cccccc' >
-                        No SVGie found! 😢 <br />
-                        Did you mint yours?
+                        <VStack>
+                            <Text>No SVGie in your wallet! 😢</Text>
+                            <SVGies address={address} width={previewSize} height={previewSize} />
+                            <Text>Do you want to mint <strong>yours</strong>?</Text>
+                        </VStack>
                     </Center>
                     :
                     <SVGie
