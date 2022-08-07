@@ -1,6 +1,6 @@
 /** NETWORK SELECTION **/
-export const network = 'mumbai'
-// export const network = 'mainnet'
+// export const network = 'mumbai'
+export const network = 'mainnet'
 
 
 /** Mainnet **/
