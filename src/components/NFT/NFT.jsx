@@ -15,7 +15,7 @@ import SVGieWrapper from "./SVGieWrapper";
 const NFT = () => {
 
     const cardVariant = useColorModeValue('shadowLight', 'shadowDark')
-    const headingVariant = useColorModeValue('withShadowLight', 'withShadowDark')
+    // const headingVariant = useColorModeValue('withShadowLight', 'withShadowDark')
     const cardSize = 'xl'
 
     const { address, isError, isLoading, isConnected } = useAccount()
@@ -69,7 +69,7 @@ const NFT = () => {
                                 </VStack>
                 )}
             </Center>
-            {owner && owner === address && // Owner Buttons Section
+            {/* {owner && owner === address && // Owner Buttons Section
                 <VStack
                     pb='1em'
                 >
@@ -81,12 +81,9 @@ const NFT = () => {
                         Owner Functions
                     </Heading>
                     <Center py='.5em'>
-                        {/* <OwnerTeamMint /> */}
+                        <OwnerTeamMint />
                     </Center>
-                </VStack>
-
-
-            }
+                </VStack>} */}
         </>
     )
 
