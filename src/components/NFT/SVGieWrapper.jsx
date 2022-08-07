@@ -49,11 +49,11 @@ const SVGieWrapper = (props) => {
     return <>
         {(loadingBalance) ?
             <Center align='center' color='#303030' textShadow='0 0 3px #cccccc'>
-                Loading...0
+                Loading...
             </Center >
             : (!tokenIdBuffer) ?
                 <Center align='center' color='#303030' textShadow='0 0 3px #cccccc'>
-                    Loading...1
+                    Loading...
                 </Center >
                 : !balance ?
                     <Center align='center' color='#303030' textShadow='0 0 3px #cccccc' >

@@ -50,7 +50,7 @@ const SVGie = (props) => {
                 :
                 isLoading ?
                     <Skeleton>
-                        Loading...2
+                        Loading...
                     </Skeleton>
                     :
                     <InlineSVG
