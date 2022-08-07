@@ -2,6 +2,7 @@ import { Center, Heading, useColorModeValue, Wrap, WrapItem, Image } from "@chak
 import Card from "./Card"
 
 const images = [
+    'k',
     'g',
     'e',
     'c',
@@ -10,8 +11,8 @@ const images = [
     'i',
     'h',
     'j',
-    'b',
     'a',
+    'b',
 ]
 
 const Examples = () => {
