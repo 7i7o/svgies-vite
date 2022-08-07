@@ -1,33 +1,35 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import { useColorMode } from '@chakra-ui/react'
+import Home from './components/Home';
 
-function App() {
-  const [count, setCount] = useState(0)
+/** Rainbow Kit Imports**/
+// const alchemyId = import.meta.env.ALCHEMY_ID_MAINNET
+const alchemyId = import.meta.env.ALCHEMY_ID_MUMBAI
+import '@rainbow-me/rainbowkit/styles.css';
+import { darkTheme, getDefaultWallets, lightTheme, RainbowKitProvider, } from '@rainbow-me/rainbowkit';
+import { chain, configureChains, createClient, WagmiConfig, } from 'wagmi';
+import { alchemyProvider } from 'wagmi/providers/alchemy';
+import { publicProvider } from 'wagmi/providers/public';
+
+const App = () => {
+  /** Rainbow Kit Configs**/
+  const { chains, provider } = configureChains(
+    // [chain.mainnet],
+    [chain.polygonMumbai],
+    [alchemyProvider({ alchemyId: alchemyId }), publicProvider()]
+  );
+  const { connectors } = getDefaultWallets({ appName: 'SVGies', chains });
+  const wagmiClient = createClient({ autoConnect: true, connectors, provider })
+
+  const { colorMode } = useColorMode()
 
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
-    </div>
+    <WagmiConfig client={wagmiClient}>
+      <RainbowKitProvider chains={chains} theme={colorMode === 'light' ? lightTheme() : darkTheme()}>
+        <div className="svgiesApp">
+          <Home />
+        </div>
+      </RainbowKitProvider>
+    </WagmiConfig>
   )
 }
 

@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" aria-hidden="true" role="img"
+    class="iconify iconify--logos" viewBox="8 8 32 32" width="32" height="32">
+    <!-- <svg xmlns="http://www.w3.org/2000/svg" viewBox="8 8 32 32" width="32" height="32"> -->
+    <radialGradient id="751c72d6440fbbd8">
+        <stop stop-color="#751c72d6" offset="0%"></stop>
+        <stop stop-color="#440fbbd8" offset="100%"></stop>
+    </radialGradient>
+    <rect x="8" y="8" rx="800" width="100%" height="100%" opacity="100%" fill="white"></rect>
+    <rect x="8" y="8" rx="800" width="100%" height="100%" opacity="50%" fill="url(#751c72d6440fbbd8)"></rect>
+    <linearGradient id="2d70e8cffe03ecd42d70e8cf">
+        <stop stop-color="#2d70e8cf" offset="0%"></stop>
+        <stop stop-color="#fe03ecd4" offset="50%"></stop>
+        <stop stop-color="#2d70e8cf" offset="100%"></stop>
+    </linearGradient>
+    <linearGradient id="fe03ecd42d70e8cffe03ecd4">
+        <stop stop-color="#fe03ecd4" offset="0%"></stop>
+        <stop stop-color="#2d70e8cf" offset="50%"></stop>
+        <stop stop-color="#fe03ecd4" offset="100%"></stop>
+    </linearGradient>
+    <path fill="url(#2d70e8cffe03ecd42d70e8cf)" stroke-width="0.1" stroke="url(#fe03ecd42d70e8cffe03ecd4)"
+        d="M28 26 C16 31 20 16 19 29 S18 26 22 16 S18 30 20 29 S24 28 16 26 S22 26 25 24 S20 27 25 23 S19 29 23 25 S21 24 31 27 S31 20 22 19 Q13 18 28 26 M20 26 C32 31 28 16 29 29 S30 26 26 16 S30 30 28 29 S24 28 32 26 S26 26 23 24 S28 27 23 23 S29 29 25 25 S27 24 17 27 S17 20 26 19 Q35 18 20 26 z">
+    </path>
+</svg>

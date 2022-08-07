@@ -1,6 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@chakra-ui/icons': ^2.0.6
   '@chakra-ui/react': ^2.2.6
   '@emotion/react': ^11.10.0
   '@emotion/styled': ^11.10.0
@@ -12,10 +13,12 @@ specifiers:
   framer-motion: ^7.0.0
   react: ^18.2.0
   react-dom: ^18.2.0
+  svg-inline-react: ^3.2.1
   vite: ^3.0.0
   wagmi: ^0.6.1
 
 dependencies:
+  '@chakra-ui/icons': 2.0.6_react@18.2.0
   '@chakra-ui/react': 2.2.6_c4qzr6zwor2fbxwvsxhodq5fwq
   '@emotion/react': 11.10.0_3hx2ussxxho4jajbwrd6gq34qe
   '@emotion/styled': 11.10.0_osjhb3oyc3dn55vkfbzx4nrkfi
@@ -24,6 +27,7 @@ dependencies:
   framer-motion: 7.0.0_biqbaboplfbrettd7655fr4n2y
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
+  svg-inline-react: 3.2.1_react@18.2.0
   wagmi: 0.6.1_um4cugg2i3ywhvigsmvsir7hgy
 
 devDependencies:
@@ -575,6 +579,26 @@ packages:
     dependencies:
       '@chakra-ui/system': 2.2.4_rq3l25qc4qpq3j4w6o4x7hatzy
       '@chakra-ui/utils': 2.0.6
+      react: 18.2.0
+    dev: false
+
+  /@chakra-ui/icon/3.0.6_react@18.2.0:
+    resolution: {integrity: sha512-H2vE6pmpCcnlM1ASDTjlkLiOaqDgCdRDIo4hWBCPbL68d26a6ftvQBu5RmbDbeZa2mNrN3EESA8/BSa970H1Fw==}
+    peerDependencies:
+      '@chakra-ui/system': '>=2.0.0'
+      react: '>=18'
+    dependencies:
+      '@chakra-ui/utils': 2.0.6
+      react: 18.2.0
+    dev: false
+
+  /@chakra-ui/icons/2.0.6_react@18.2.0:
+    resolution: {integrity: sha512-5NWrRhWvVSjGJIS4aJGJ6z2PVb/XDIpGMCqsS0aLhrVOkIHp1fv8hvXylTiR/nShRgZU9td/XyCBXJKHoE4BAA==}
+    peerDependencies:
+      '@chakra-ui/system': '>=2.0.0'
+      react: '>=18'
+    dependencies:
+      '@chakra-ui/icon': 3.0.6_react@18.2.0
       react: 18.2.0
     dev: false
 
@@ -4281,6 +4305,16 @@ packages:
   /supports-preserve-symlinks-flag/1.0.0:
     resolution: {integrity: sha512-ot0WnXS9fgdkgIcePe6RHNk1WA8+muPa6cSjeR3V8K27q9BB1rTE3R1p7Hv0z1ZyAc8s6Vvv8DIyWf681MAt0w==}
     engines: {node: '>= 0.4'}
+
+  /svg-inline-react/3.2.1_react@18.2.0:
+    resolution: {integrity: sha512-5/hM6wxca1BG9EyrWy8Q4ZQ6zHLMI805aTFia9ZeIeXu9VT3hdIvROWtBmzRM9at91/7odwylRMJ0B3OiDXUQQ==}
+    engines: {node: '>=4'}
+    peerDependencies:
+      react: ^0.14.0 || ^15.0.0 || ^16.0.0 || ^17
+    dependencies:
+      prop-types: 15.8.1
+      react: 18.2.0
+    dev: false
 
   /tiny-invariant/1.2.0:
     resolution: {integrity: sha512-1Uhn/aqw5C6RI4KejVeTg6mIS7IqxnLJ8Mv2tV5rTc0qWobay7pDUz6Wi392Cnc8ak1H0F2cjoRzb2/AW4+Fvg==}
