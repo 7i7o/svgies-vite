@@ -41,18 +41,38 @@ const Card = {
     },
   },
   variants: {
+    noShadowLight: {
+      bg: colors.svgieLight.boxBg,
+    },
+    noShadowDark: {
+      bg: colors.svgieDark.boxBg,
+    },
+    mainShadowLight: {
+      // bg: colors.svgieLight.boxBg,
+      bg: colors.svgieLight.boxBgHover,
+      _hover: {
+        boxShadow: `0 0 8px ${colors.svgieLight.accent}`,
+      },
+    },
+    mainShadowDark: {
+      // bg: colors.svgieDark.boxBg,
+      bg: colors.svgieDark.boxBgHover,
+      _hover: {
+        boxShadow: `0 0 8px ${colors.svgieDark.accent}`,
+      },
+    },
     shadowLight: {
       bg: colors.svgieLight.boxBg,
       _hover: {
-        boxShadow: `0 0 8px ${colors.svgieLight.accent}`,
-        bg: colors.svgieLight.boxBgHover,
+        boxShadow: `0 0 5px ${colors.svgieLight.accent}`,
+        // bg: colors.svgieLight.boxBgHover,
       },
     },
     shadowDark: {
       bg: colors.svgieDark.boxBg,
       _hover: {
-        boxShadow: `0 0 8px ${colors.svgieDark.accent}`,
-        bg: colors.svgieDark.boxBgHover,
+        boxShadow: `0 0 5px ${colors.svgieDark.accent}`,
+        // bg: colors.svgieDark.boxBgHover,
       },
     },
   },

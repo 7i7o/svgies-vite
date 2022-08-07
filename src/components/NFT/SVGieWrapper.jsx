@@ -1,4 +1,4 @@
-import { Center, Text } from '@chakra-ui/react'
+import { Center } from '@chakra-ui/react'
 
 import { useContext, useEffect, useState } from 'react'
 import { useContractRead } from 'wagmi'
@@ -26,7 +26,8 @@ const SVGieWrapper = (props) => {
             return
         }
 
-        console.log(`balanceOf ${address} is ${userBalance.toNumber()}`)
+        // console.log(`balanceOf ${address} is ${userBalance.toNumber()}`)
+
         setBalance(userBalance.toNumber())
         setLoadingBalance(false)
 

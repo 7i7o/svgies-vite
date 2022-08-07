@@ -7,7 +7,7 @@ import { wallets } from "../constants/wallets"
 const Examples = () => {
 
     const headingVariant = useColorModeValue('withShadowLight', 'withShadowDark')
-    const cardVariant = useColorModeValue('shadowLight', 'shadowDark')
+    const cardVariant = useColorModeValue('noShadowLight', 'noShadowDark')
 
     return (
         <>
@@ -29,7 +29,11 @@ const Examples = () => {
                                     size='sm'
                                     variant={cardVariant}
                                 >
-                                    <SVGies className='SVGiejs' address={w} width={150} height={150} />
+                                    <SVGies
+                                        // className='SVGiejs'
+                                        address={w}
+                                        width={150}
+                                        height={150} />
                                 </Card>
                             </WrapItem>
                         )

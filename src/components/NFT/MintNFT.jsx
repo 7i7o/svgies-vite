@@ -8,6 +8,7 @@ import {
 import { ethers } from "ethers"
 import { Context } from '../../Context'
 import { useState } from 'react'
+import { coinName } from '../../constants/constants'
 
 const MintNFT = () => {
     const { addressOrName, contractInterface, balance, mintActive, mintPrice } = useContext(Context)
@@ -69,10 +70,10 @@ const MintNFT = () => {
                     colorScheme='blue'
                     disabled={!write || isLoading || minting}
                     onClick={safeMint}
-                    isLoading={isLoading}
+                    isLoading={isLoading || minting}
                     loadingText={`Minting...`}
                 >
-                    {`${mintActive ? (mintPrice ? `Mint (${ethers.utils.formatEther(mintPrice)} ETH)` : 'Free Mint') : 'Mint (SOON)'}`}
+                    {`${mintActive ? (mintPrice ? `Mint (${ethers.utils.formatEther(mintPrice)} ${coinName})` : 'Free Mint') : 'Mint (SOON)'}`}
                 </Button>
             }
             {isSuccess &&

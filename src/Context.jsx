@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { addressOrName } from "./constants/contract";
-import contractABI from "./constants/contractABI.json"
+import { addressOrName, contractABI } from "./constants/constants";
 
 export const Context = React.createContext();
 

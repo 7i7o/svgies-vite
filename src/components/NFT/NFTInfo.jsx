@@ -1,7 +1,8 @@
-import { HStack, Tag } from "@chakra-ui/react"
+import { HStack, Tag, Link } from "@chakra-ui/react"
 import { useContext, useEffect } from "react"
 import { useContractRead } from "wagmi"
 import { Context } from "../../Context"
+import { openseaURL } from "../../constants/constants"
 
 const NFTInfo = () => {
 
@@ -31,7 +32,16 @@ const NFTInfo = () => {
 
     return (
         <HStack >
-            <Tag>Total SVGies in Collection: {totalSupplyBN ? totalSupplyBN.toNumber() : `Loading...`}</Tag>
+            <Tag>
+                Total SVGies in&nbsp;
+                <Link aria-label='Etherscan Link'
+                    alt='Etherscan Link'
+                    href={openseaURL}
+                    isExternal
+                >
+                    Collection
+                </Link>
+                : {totalSupplyBN ? totalSupplyBN.toNumber() : `Loading...`}</Tag>
         </HStack>
     )
 }
