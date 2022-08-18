@@ -73,7 +73,7 @@ const MintNFT = () => {
                     isLoading={isLoading || minting}
                     loadingText={`Minting...`}
                 >
-                    {`${mintActive ? (mintPrice ? `Mint (${ethers.utils.formatEther(mintPrice)} ${coinName})` : 'Free Mint') : 'Mint (SOON)'}`}
+                    {`${mintActive ? (mintPrice ? (mintPrice > 0 ? `Mint (${ethers.utils.formatEther(mintPrice)} ${coinName})` : 'FREE MINT') : 'Free Mint') : 'Mint (SOON)'}`}
                 </Button>
             }
             {isSuccess &&
